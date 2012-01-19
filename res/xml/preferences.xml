@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <EditTextPreference
+	            android:key="uri"
+	            android:title="URI"
+	            android:dialogTitle="URI"
+	            android:defaultValue="http://www.google.com/"
+  				android:inputType="textUri"/>
+    <EditTextPreference
+	            android:key="num_dl"
+	            android:title="Number of downloads"
+	            android:summary="The number of downloads to perform"
+	            android:dialogTitle="Number of downloads"
+	            android:dialogMessage="Enter the number of downloads that will be done"   
+	            android:defaultValue="10"
+  				android:inputType="number"/>			
+</PreferenceScreen>
