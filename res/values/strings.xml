@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, WebTester!</string>
+    <string name="app_name">webtester</string>
+    <string name="number_repetitions">Number of repetitions</string>
+    <string name="URL">URL</string>
+    <string name="delay">Delay time between repetitions</string>
+    <string name="run">Run</string>
+    <string name="running">Running...</string>
+</resources>
