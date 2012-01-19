@@ -12,7 +12,7 @@ import android.provider.Browser;
 public class WebTester extends Activity {
     /** Called when the activity is first created. */
 	
-	final WebTester ME = this;
+	// final WebTester ME = this;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
