@@ -13,5 +13,13 @@
 	            android:dialogTitle="Number of downloads"
 	            android:dialogMessage="Enter the number of downloads that will be done"   
 	            android:defaultValue="10"
-  				android:inputType="number"/>			
+  				android:inputType="number"/>
+	<EditTextPreference
+	            android:key="time_between"
+	            android:title="Time between reloads"
+	            android:summary="The time in seconds between reloads"
+	            android:dialogTitle="Time between reloads"
+	            android:dialogMessage="Enter the number seconds that should go between reloads"   
+	            android:defaultValue="60"
+  				android:inputType="number"/>		
 </PreferenceScreen>

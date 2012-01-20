@@ -5,6 +5,6 @@
     android:layout_height="fill_parent"
     >
 <TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="fill_parent" android:text="@string/hello"></TextView>
-<EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/editText1" android:inputType="textUri" android:text="http://www.google.com"></EditText>
+<!-- <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/editText1" android:inputType="textUri" android:text="http://www.google.com"></EditText> -->
 <Button android:layout_height="wrap_content" android:text="@string/run" android:id="@+id/button1" android:layout_width="match_parent"></Button>
 </LinearLayout>
