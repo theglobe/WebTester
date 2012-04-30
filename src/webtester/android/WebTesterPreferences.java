@@ -1,7 +1,5 @@
 package webtester.android;
 
-import com.example.webtester.R;
-
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 

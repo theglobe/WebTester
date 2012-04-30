@@ -16,8 +16,6 @@ import android.util.Log;
 import android.os.AsyncTask;
 import java.lang.Void;
 
-import com.example.webtester.R;
-
 
 public class WebTester extends Activity {
     /** Called when the activity is first created. */
