@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WebTesterPreferences"
+        <activity android:name="webtester.android.WebTesterPreferences"
                   android:label="WebTester Preferences">
         </activity>
     </application>

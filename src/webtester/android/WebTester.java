@@ -1,4 +1,4 @@
-package com.example.webtester;
+package webtester.android;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import android.view.MenuItem;
 import android.util.Log;
 import android.os.AsyncTask;
 import java.lang.Void;
+
+import com.example.webtester.R;
 
 
 public class WebTester extends Activity {
