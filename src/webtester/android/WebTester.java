@@ -30,8 +30,12 @@ public class WebTester extends Activity {
         
         // Find the resources
         final Button button = (Button) findViewById(R.id.button1);
-        // final EditText text = (EditText) findViewById(R.id.editText1);
+        final TextView text = (TextView) findViewById(R.id.textView1);
         
+    	// Load settings
+    	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(WebTester.this);
+    	text.setText(sharedPrefs.getString("uri", getResources().getString(R.string.hello)));
+    	
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 
@@ -89,6 +93,7 @@ public class WebTester extends Activity {
 		protected void onProgressUpdate(Uri... uri) {
     		Browser.clearHistory(getContentResolver());
 
+    		Intent clear_cache = new Intent(Intent.AC, uri[0]);
     		Intent intent = new Intent(Intent.ACTION_VIEW, uri[0]);
     		startActivity(intent);
 
