@@ -40,7 +40,6 @@ public class WebTester extends Activity {
             public void onClick(View v) {
                 
             	// Disable the button
-            	Log.d("WebTester", "Disabling button");
             	button.setText(R.string.running);
             	button.setClickable(false);
 
@@ -72,6 +71,8 @@ public class WebTester extends Activity {
 	
 
 	private class DoIterationsTask extends AsyncTask<SharedPreferences, Uri, Void> {
+		private int count = 0;
+		
 		protected Void doInBackground(SharedPreferences... prefs) {
 			
 			SharedPreferences sharedPrefs = prefs[0];
@@ -80,26 +81,34 @@ public class WebTester extends Activity {
         	int numIterations = Integer.parseInt(sharedPrefs.getString("num_dl", "10"));
         	long sleepTime = Long.parseLong(sharedPrefs.getString("time_between", "60")) * 1000;
 
+        	Log.d("WebTester", "TEST START");
+        	
         	for (int i = 1; i <= numIterations; i++) {
+        		this.count = i;
         		publishProgress(uri);
 
         		// Don't have to wait after the last iteration
         		if (i < numIterations) SystemClock.sleep(sleepTime);
         	}
  
+        	Log.d("WebTester", "FINAL DOWNLOAD");
+        	
         	return null;
 		}
 
 		protected void onProgressUpdate(Uri... uri) {
     		Browser.clearHistory(getContentResolver());
 
-    		Intent clear_cache = new Intent(Intent.AC, uri[0]);
+    		// Intent clear_cache = new Intent(Intent.AC, uri[0]);
     		Intent intent = new Intent(Intent.ACTION_VIEW, uri[0]);
+    		// Display which iteration
+
+    		//Toast.makeText(getApplicationContext(), "Iteration #"+Integer.toString(progress[0]), Toast.LENGTH_LONG).show();
+    		Toast.makeText(getApplicationContext(), "Iteration #"+Integer.toString(this.count), Toast.LENGTH_LONG).show();
+    		Log.d("WebTester", "START OF DOWNLOAD " + count);
+    		
     		startActivity(intent);
 
-    		// Display which iteration
-//    		Toast.makeText(getApplicationContext(), "Iteration #"+Integer.toString(progress[0]), Toast.LENGTH_LONG).show();
-    		Log.d("WebTester", "New Iteration");
 		}
 		protected void onPostExecute(Void result) {
         	// Enable the button
